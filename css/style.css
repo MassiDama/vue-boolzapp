@@ -34,12 +34,156 @@
     display: flex;
 }
 
+/* stili generali colonna sinistra */
 .accounts {
     width: 30%;
     height: 100%;
-    background-color: rgb(203, 127, 27);
+    background-color: (0deg 0% 100%);
 }
 
+.main-avatar {
+    width: 100%;
+    height: 60px;
+    background-color: hsl(0deg 0% 91.76%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-img {
+    display: flex;
+    align-items: center;
+}
+
+.main-img img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main-icons i {
+    padding-right: 15px;
+    font-size: 20px;
+    color: hsl(0deg 0% 69.41%);
+}
+
+.notifications {
+    width: 100%;
+    height: 85px;
+    background-color: hsl(198.55deg 94.83% 77.25%);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 1px none;
+    border-radius: 100%;
+}
+
+.fa-bell-slash {
+    padding: 20%;
+    font-size: 30px;
+    color: hsl(198.55deg 94.83% 77.25%);
+}
+
+.content-not {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.content-not span:first-child {
+    font-size: 15px;
+}
+
+.content-not span:last-child {
+    font-size: 13px;
+    text-decoration-line: underline;
+    color: hsl(212.83deg 20.95% 50.39%);
+}
+
+.search-chat {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(0deg 0% 98.04%);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.search-chat-sticker {
+    width: 10%;
+    text-align: center;
+}
+
+.search-chat-input {
+    width: 90%;
+    height: 70%;
+}
+
+.search-chat-input input {
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* stili contatti avatar */
+.all-avatar {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: hsl(0deg 0% 100%);
+    border-top: 1px solid hsl(0, 2%, 92%);
+}
+
+.avatar img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.content-avatar {
+    height: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.last-mex {
+    font-size: 13px;
+    color: hsl(0, 0%, 71%);
+}
+
+.data-chat {
+    height: 100%;
+    padding-left: 70px;
+    padding-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: hsl(0, 0%, 71%);
+}
+
+/* stili generali colonna destra */
 .chat {
     width: 70%;
     height: 100%;
