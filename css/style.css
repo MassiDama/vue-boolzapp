@@ -19,3 +19,29 @@
     height: calc(100vh - 150px);
     background-color: hsl(150deg 7.69% 84.71%);
 }
+
+/* stili generali all'interno del content container */
+.content-container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.accounts {
+    width: 30%;
+    height: 100%;
+    background-color: rgb(203, 127, 27);
+}
+
+.chat {
+    width: 70%;
+    height: 100%;
+    background-color: rgb(211, 149, 138); 
+}
