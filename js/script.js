@@ -173,13 +173,15 @@ createApp({
         }
     },
     methods: {
+        // Click sul contatto mostra la conversazione del contatto cliccato
         openChat(i) {
             console.log(i);
             this.activeItem = i;
             console.log(this.contacts[this.activeItem].messages);
         },
-        sentMex() {
 
+        //  Aggiunta di un messaggio
+        sentMex() {
             this.contacts[this.activeItem].messages.push(
                 {
                     date: '',
@@ -188,7 +190,21 @@ createApp({
                 }
             );
             this.newMex = "";
-        }
+
+            // Risposta dall’interlocutore
+            setTimeout(() => 
+
+                this.contacts[this.activeItem].messages.push(
+                    {
+                        date: '',
+                        message: "Ok",
+                        status: 'received'
+                    }
+                ),
+                5000
+            );
+        },
+
 
     },
     mounted() {
