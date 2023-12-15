@@ -36,7 +36,7 @@
 
 /* stili generali colonna sinistra */
 .accounts {
-    width: 30%;
+    width: 40%;
     height: 100%;
     background-color: (0deg 0% 100%);
 }
@@ -144,10 +144,16 @@
     width: 100%;
     height: 90px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
     background-color: hsl(0deg 0% 100%);
     border-top: 1px solid hsl(0, 2%, 92%);
+}
+
+.space-b {
+    display: flex;
+    justify-content: space-between;
 }
 
 .avatar img {
@@ -161,7 +167,7 @@
 
 .content-avatar {
     height: 100%;
-    padding-top: 15px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -175,7 +181,7 @@
 
 .data-chat {
     height: 100%;
-    padding-left: 70px;
+    padding-right: 10px;
     padding-top: 15px;
     display: flex;
     align-items: flex-start;
@@ -185,7 +191,89 @@
 
 /* stili generali colonna destra */
 .chat {
-    width: 70%;
+    width: 60%;
     height: 100%;
     background-color: rgb(211, 149, 138); 
+}
+
+.header-chat {
+    width: 100%;
+    height: 60px;
+    background-color: hsl(0deg 0% 91.76%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid hsl(0, 1%, 80%);
+}
+
+/* stili generali main chat */
+.main-chat {
+    width: 100%;
+    height: calc(100% - 140px);
+    background-image: url(../img/panini.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.messages {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sending-message {
+    max-width: 300px;
+    height: 50px;
+    background-color: hsl(94.29deg 84% 85.29%);
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.sending-message span {
+    width: 100%;
+    height: 100%;
+
+}
+
+.reply-message {
+    align-self: flex-start;
+    max-width: 300px;
+    height: 50px;
+    background-color: white;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+/* stili generali footer chat */
+.footer-chat {
+    width: 100%;
+    height: 80px;
+    background-color: hsl(26.67deg 27.27% 93.53%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-chat input {
+    width: 80%;
+    height: 60%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.footer-icons {
+    width: 10%;
+    text-align: center;
+    font-size: 25px;
+    color: hsl(36deg 3.94% 50.2%);
 }
