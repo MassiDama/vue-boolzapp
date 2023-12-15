@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
 
+            searchName: "",
+            // includedName: false,
             newMex : "",
             activeItem: 0,
             contacts: [
@@ -175,9 +177,8 @@ createApp({
     methods: {
         // Click sul contatto mostra la conversazione del contatto cliccato
         openChat(i) {
-            console.log(i);
+            // console.log(i);
             this.activeItem = i;
-            console.log(this.contacts[this.activeItem].messages);
         },
 
         //  Aggiunta di un messaggio
@@ -193,7 +194,6 @@ createApp({
 
             // Risposta dall’interlocutore
             setTimeout(() => 
-
                 this.contacts[this.activeItem].messages.push(
                     {
                         date: '',
@@ -205,10 +205,27 @@ createApp({
             );
         },
 
+        // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, 
+        // vengono visualizzati solo i contatti il cui nome contiene le lettere inserite 
+        includesAvatar() {
+
+            console.log('qua ho provato a filtrare');
+
+            return this.contacts.filter((obj) => obj.name.toUpperCase().includes(this.searchName.toUpperCase()));
+
+            // ho filtrato la lista contatti che soddisfano la condizione di inclusione di searchName su "name" di ogni oggetto obj in contacts
+            // uso toUpperCase per farmi diventare le stringhe tutte maiuscole 
+            // e assicurarmi che il filtro venga applicato anche se faccio la ricerca sia in maiuscolo e minuscolo (key sensitive)
+            
+            // obj (contenuto che sta nelle parentesi graffe, nella lista contacts)
+            // ho utilizzato questa funzione (che mi ritorna una lista di contatti "filtrati") al posto di contacts nel ciclo v-for "di ogni avatar"
+        },
+
 
     },
     mounted() {
         console.log("L'applicazione è caricata!");
+        
 
         }
     

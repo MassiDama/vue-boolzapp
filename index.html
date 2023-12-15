@@ -45,11 +45,11 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="search-chat-input">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchName" @keydown.enter="includesAvatar">
                     </div>
                 </div>
                 <div class="all-avatar">
-                    <div class="avatar" v-for="(contact, i) in contacts" key="i" @click="openChat(i)">
+                    <div class="avatar" v-for="(contact, i) in includesAvatar()" key="i" @click="openChat(i)" >
                         <div class="space-b">
                             <img :src="contact.avatar" alt="">
                             <div class="content-avatar"> 

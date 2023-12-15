@@ -18,6 +18,8 @@
 .container-bottom {
     height: calc(100vh - 150px);
     background-color: hsl(150deg 7.69% 84.71%);
+    /* background-image: url(../img/sfondopanini.png);
+    background-size: contain; */
 }
 
 /* stili generali all'interno del content container */
