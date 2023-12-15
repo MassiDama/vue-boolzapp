@@ -5,7 +5,6 @@ createApp({
         return {
 
             searchName: "",
-            // includedName: false,
             newMex : "",
             activeItem: 0,
             contacts: [
