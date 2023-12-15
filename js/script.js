@@ -172,6 +172,11 @@ createApp({
         }
     },
     methods: {
+        openChat(i) {
+            console.log(i);
+            this.activeItem = i;
+            
+        }
 
 
     },
