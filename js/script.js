@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
 
+            newMex : "",
             activeItem: 0,
             contacts: [
                 {
@@ -175,9 +176,19 @@ createApp({
         openChat(i) {
             console.log(i);
             this.activeItem = i;
-            
-        }
+            console.log(this.contacts[this.activeItem].messages);
+        },
+        sentMex() {
 
+            this.contacts[this.activeItem].messages.push(
+                {
+                    date: '',
+                    message: this.newMex,
+                    status: 'sent'
+                }
+            );
+            this.newMex = "";
+        }
 
     },
     mounted() {
