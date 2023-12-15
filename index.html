@@ -22,8 +22,8 @@
             <div class="accounts">
                 <div class="main-avatar">
                     <div class="main-img" >
-                        <img src="img/avatar7.png" alt="">
-                        <span class="name-avatar">Massimi</span>
+                        <img src="img/avatar8.png" alt="">
+                        <span class="name-avatar">Frank Rijkaard</span>
                     </div>
                     <div class="main-icons">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -61,28 +61,15 @@
                             12:00
                         </div>
                     </div>
-                    
-                    <!-- <div class="avatar">
-                        <div class="space-b">
-                            <img src="img/avatar2.png" alt="">
-                            <div class="content-avatar">
-                                <span class="name-avatar">Massimi</span>
-                                <span class="last-mex">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                        <div class="data-chat">
-                            12:00
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <!-- colonna di destra -->
             <div class="chat">
                 <div class="header-chat">
                     <div class="main-img" >
-                        <img src="img/avatar7.png" alt="">
+                        <img :src="contacts[0].avatar" :alt="contacts[0].name">
                         <div class="content-avatar">
-                            <span class="name-avatar">Massimi</span>
+                            <span class="name-avatar"> {{ contacts[0].name }} </span>
                             <span class="last-mex">Ultimo messaggio inviato alle 12:00</span>
                         </div>
                     </div>
@@ -93,16 +80,8 @@
                     </div>
                 </div>
                 <div class="main-chat">
-                    <div class="messages">
-                        <div class="sending-message">
-                            <span>Hai visto che rovesciata?</span>
-                        </div>
-                        <div class="sending-message">
-                            <span>Ti è piaciuta?</span>
-                        </div>
-                        <div class="reply-message">
-                            <span>Potevi fare meglio</span>
-                        </div>
+                    <div class="messages" v-for="mex in contacts[activeItem].messages" v-bind:class="mex.status === 'sent' ? 'sending-message' : 'reply-message' ">
+                        {{ mex.message }}
                     </div>
 
                 </div>
@@ -122,3 +101,5 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
