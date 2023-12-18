@@ -232,13 +232,21 @@
     justify-content: center;
 }
 
+.messages span {
+    font-size: 12px;
+    color: hsl(0deg 0% 69.41%);
+    align-self: flex-end;
+    padding-top: 2px;
+}
+
 .sending-message {
     align-self: flex-end;
     max-width: 250px;
-    height: 50px;
+    height: 60px;
     background-color: hsl(94.29deg 84% 85.29%);
     align-items: flex-start;
     padding: 10px;
+    padding-bottom: 0;
     margin-bottom: 15px;
     margin-right: 20px;
     border-radius: 8px;
@@ -247,10 +255,11 @@
 .reply-message {
     align-self: flex-start;
     max-width: 250px;
-    height: 50px;
+    height: 60px;
     background-color: white;
     align-items: flex-start;
     padding: 10px;
+    padding-bottom: 0;
     margin-bottom: 15px;
     margin-left: 20px;
     border-radius: 8px;

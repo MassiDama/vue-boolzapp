@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
 
+            time: '',
             searchName: "",
             newMex : "",
             activeItem: 0,
@@ -178,6 +179,7 @@ createApp({
         openChat(i) {
             // console.log(i);
             this.activeItem = i;
+            console.log(this.time);
         },
 
         //  Aggiunta di un messaggio
@@ -219,7 +221,6 @@ createApp({
             // obj (contenuto che sta nelle parentesi graffe, nella lista contacts)
             // ho utilizzato questa funzione (che mi ritorna una lista di contatti "filtrati") al posto di contacts nel ciclo v-for "di ogni avatar"
         },
-
 
     },
     mounted() {
