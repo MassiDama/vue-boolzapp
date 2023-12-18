@@ -221,6 +221,20 @@ createApp({
             // obj (contenuto che sta nelle parentesi graffe, nella lista contacts)
             // ho utilizzato questa funzione (che mi ritorna una lista di contatti "filtrati") al posto di contacts nel ciclo v-for "di ogni avatar"
         },
+        getTime(date) {
+
+            // ho creato una funzione che dalla stringa di data e ora mi ritorna solo ora e minuti
+            // con split separo la data allo slash che così diventa un array
+            const parts = date.split("/");
+
+            // inverto giorno e mese perchè nella funzione new Date è ammesso in input solo il formato mese/giorno/anno
+            const newDate = parts[1] + "/" + parts[0] + "/" + parts[2];
+
+            // vado a prendere solo ora e minuti con la funzione new Date
+            const time = new Date(newDate).getHours() + ":" + new Date(newDate).getMinutes();
+            return time;
+
+        }
 
     },
     mounted() {
@@ -228,5 +242,6 @@ createApp({
         
 
         }
+
     
 }).mount('#app')

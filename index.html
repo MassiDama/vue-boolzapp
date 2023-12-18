@@ -82,7 +82,7 @@
                 <div class="main-chat">
                     <div class="messages" v-for="mex in contacts[activeItem].messages" v-bind:class="mex.status === 'sent' ? 'sending-message' : 'reply-message' ">
                         {{ mex.message }}
-                        <span> {{ mex.date }}</span>
+                        <span> {{ getTime(mex.date) }}</span>
                     </div>
 
                 </div>
