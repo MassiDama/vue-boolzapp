@@ -179,14 +179,19 @@ createApp({
         openChat(i) {
             // console.log(i);
             this.activeItem = i;
-            console.log(this.time);
         },
 
         //  Aggiunta di un messaggio
         sentMex() {
+
+            // console.log(new Date().getHours() + ":" + new Date().getMinutes());
+            
             this.contacts[this.activeItem].messages.push(
                 {
-                    date: '',
+                    // new Date() mi torna la data e orario corrente 
+                    // toLocaleString mi ritorna il formato (GG/MM/YYYY, HH:mm:ss)
+                    // sostituisco con replace la virgola con nulla
+                    date: new Date().toLocaleString("it-IT").replace(",", ""),
                     message: this.newMex,
                     status: 'sent'
                 }
@@ -197,7 +202,7 @@ createApp({
             setTimeout(() => 
                 this.contacts[this.activeItem].messages.push(
                     {
-                        date: '',
+                        date: new Date().toLocaleString("it-IT").replace(",", ""),
                         message: "Ok",
                         status: 'received'
                     }
@@ -234,6 +239,7 @@ createApp({
             const time = new Date(newDate).getHours() + ":" + new Date(newDate).getMinutes();
             return time;
 
+            // new Date() passa prima il mese e poi il giorno
         }
 
     },
